@@ -38,7 +38,7 @@ export default function RootLayout({
                     <input
                       type="search"
                       placeholder="Search by idea or keyword"
-                      className="w-full h-10 rounded-full border border-[--color-border] bg-[--color-card] pl-10 pr-4 text-sm placeholder:text-[--color-muted-foreground] focus:outline-none focus:ring-2 focus:ring-[--color-ring]"
+                      className="w-full h-10 rounded-full border bg-[--color-card] pl-10 pr-4 text-sm placeholder:text-[--color-muted-foreground] focus:outline-none focus:ring-2 focus:ring-[--color-ring]"
                       aria-label="Search by idea or keyword"
                     />
                     <svg aria-hidden viewBox="0 0 20 20" className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-[--color-muted-foreground]">
@@ -47,6 +47,7 @@ export default function RootLayout({
                   </div>
                 </div>
                 <Link href="/auth" className="hidden sm:inline-flex items-center h-10 px-4 rounded-full bg-[--color-primary] text-[--color-primary-foreground] text-sm font-medium shadow-[--shadow-soft] hover:opacity-90">Sign in</Link>
+                <Link href="/auth" className="inline-flex items-center h-10 px-4 rounded-full border bg-[--color-card] text-sm font-medium hover:bg-[--color-muted]">Sign up</Link>
                 <Link href="/dashboard" className="inline-flex items-center h-10 px-4 rounded-full border border-[--color-border] bg-[--color-card] text-sm font-medium hover:bg-[--color-muted]">Dashboard</Link>
               </div>
             </div>
