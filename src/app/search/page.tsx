@@ -2,12 +2,13 @@
 import { useState } from "react";
 import Link from "next/link";
 import { DomainCard } from "@/components/domain/DomainCard";
+import type { DomainCardProps } from "@/components/domain/DomainCard";
 
-const mockDomains = Array.from({ length: 24 }).map((_, i) => ({
+const mockDomains: DomainCardProps[] = Array.from({ length: 24 }).map((_, i) => ({
   slug: `brand-${i}`,
   name: i % 3 === 0 ? `brandly.io` : i % 3 === 1 ? `flowbank.com` : `zupra.com`,
   priceUsd: i % 3 === 0 ? 4800 : i % 3 === 1 ? 12000 : 7900,
-  plan: i % 2 === 0 ? "monthly" : null,
+  plan: i % 2 === 0 ? ("monthly" as const) : null,
   popularity: i % 3 === 0 ? "High" : i % 3 === 1 ? "Medium" : "Emerging",
 }));
 

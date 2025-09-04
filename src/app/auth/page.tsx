@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { supabase } from "@/lib/supabase/client";
+import { getSupabase } from "@/lib/supabase/client";
 
 export default function AuthPage() {
   const [email, setEmail] = useState("");
@@ -9,8 +9,14 @@ export default function AuthPage() {
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
     setStatus(null);
-    const { error } = await supabase.auth.signInWithOtp({ email, options: { emailRedirectTo: `${process.env.NEXT_PUBLIC_SITE_URL}/` } });
-    setStatus(error ? `Error: ${error.message}` : "Check your email for a sign-in link.");
+    try {
+      const supabase = getSupabase();
+      const { error } = await supabase.auth.signInWithOtp({ email, options: { emailRedirectTo: `${process.env.NEXT_PUBLIC_SITE_URL}/` } });
+      setStatus(error ? `Error: ${error.message}` : "Check your email for a sign-in link.");
+    } catch (err) {
+      const message = err instanceof Error ? err.message : "Missing configuration";
+      setStatus(`Error: ${message}`);
+    }
   }
 
   return (
