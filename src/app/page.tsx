@@ -13,7 +13,7 @@ const heroExamples = ["fintech", "cute pet brand", "AI tools"];
 
 export default function Home() {
   return (
-    <div className="container-px mx-auto">
+    <div>
       <section className="py-10 sm:py-16">
         <div className="max-w-3xl">
           <h1 className="text-[32px] sm:text-[40px] font-semibold tracking-tight leading-[1.1]">

@@ -30,7 +30,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <div className="min-h-screen flex flex-col">
           <header className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-background/70 bg-background/80 border-b border-[--color-border]">
-            <div className="container-px mx-auto flex items-center gap-4 h-16">
+            <div className="container-px container-max flex items-center gap-4 h-16">
               <Link href="/" className="font-semibold text-[20px] tracking-tight">Dotto</Link>
               <div className="ml-auto flex items-center gap-3">
                 <div className="hidden sm:flex items-center gap-2">
@@ -52,7 +52,7 @@ export default function RootLayout({
               </div>
             </div>
             <div className="border-t border-[--color-border] bg-[--color-muted] text-[12px] text-[--color-muted-foreground]">
-              <div className="container-px mx-auto py-2 flex items-center justify-between">
+              <div className="container-px container-max py-2 flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <span>Escrow</span>
                   <span>Refund Guarantee</span>
@@ -63,10 +63,10 @@ export default function RootLayout({
             </div>
           </header>
 
-          <main className="flex-1">{children}</main>
+          <main className="flex-1 container-px container-max">{children}</main>
 
           <footer className="mt-12 border-t border-[--color-border] bg-[--color-muted]">
-            <div className="container-px mx-auto py-10 grid gap-6 sm:grid-cols-3 text-sm">
+            <div className="container-px container-max py-10 grid gap-6 sm:grid-cols-3 text-sm">
               <div>
                 <div className="font-semibold mb-2">Why Dotto</div>
                 <p className="text-[--color-muted-foreground]">We hold funds in escrow until you confirm control. Full refund if the transfer doesn’t complete.</p>
