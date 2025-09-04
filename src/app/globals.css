@@ -1,21 +1,22 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #0f172a;
-  --muted: #f1f5f9;
-  --muted-foreground: #475569;
-  --primary: #1e293b;
+  /* Light, premium, minimalist */
+  --background: #fcfcfd;
+  --foreground: #0b1220;
+  --muted: #f4f6f8;
+  --muted-foreground: #5b6573;
+  --primary: #111827;
   --primary-foreground: #ffffff;
-  --accent: #0ea5e9;
+  --accent: #2563eb;
   --accent-foreground: #ffffff;
   --success: #10b981;
   --warning: #f59e0b;
   --danger: #ef4444;
   --card: #ffffff;
-  --border: #e2e8f0;
-  --ring: #94a3b8;
-  --shadow: 0 10px 25px rgba(2, 6, 23, 0.06), 0 2px 6px rgba(2, 6, 23, 0.04);
+  --border: #e6e8eb;
+  --ring: #8a94a6;
+  --shadow: 0 10px 30px rgba(2, 6, 23, 0.06), 0 2px 8px rgba(2, 6, 23, 0.04);
   --radius: 14px;
   --radius-lg: 18px;
 }
@@ -42,21 +43,7 @@
   --shadow-soft: var(--shadow);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0b1020;
-    --foreground: #e5e7eb;
-    --muted: #0f172a;
-    --muted-foreground: #9aa4b2;
-    --primary: #e2e8f0;
-    --primary-foreground: #0b1020;
-    --accent: #38bdf8;
-    --accent-foreground: #0b1020;
-    --card: #0d1428;
-    --border: #1f2937;
-    --ring: #334155;
-  }
-}
+/* Force light theme for a calm, premium look */
 
 html {
   -webkit-font-smoothing: antialiased;
